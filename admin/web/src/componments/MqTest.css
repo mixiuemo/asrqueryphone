@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+.mqtest-shell {
+  --bg: #0e1424;
+  --bg-2: #0b1b2e;
+  --panel: rgba(14, 21, 36, 0.85);
+  --panel-2: rgba(255, 255, 255, 0.04);
+  --accent: #00d4ff;
+  --accent-2: #00f5a0;
+  --text: #e6edf7;
+  --muted: #9fb2c8;
+  --grid: rgba(0, 212, 255, 0.08);
+
+  min-height: calc(100vh - 96px);
+  padding: 24px;
+  color: var(--text);
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(0, 245, 160, 0.18), transparent 60%),
+    radial-gradient(900px 500px at 90% 0%, rgba(0, 212, 255, 0.16), transparent 55%),
+    linear-gradient(180deg, var(--bg), var(--bg-2));
+  position: relative;
+  overflow: hidden;
+}
+
+.mqtest-workbench {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1.3fr);
+  gap: 18px;
+}
+
+.mqtest-column {
+  display: grid;
+  gap: 16px;
+}
+
+.mqtest-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+    linear-gradient(180deg, var(--grid) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.mqtest-hero {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: linear-gradient(120deg, rgba(0, 212, 255, 0.15), rgba(0, 245, 160, 0.08));
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  animation: mqtest-fade-in 500ms ease-out;
+}
+
+.mqtest-title {
+  color: var(--text) !important;
+  margin: 0 !important;
+  letter-spacing: 0.5px;
+}
+
+.mqtest-subtitle {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.mqtest-hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.mqtest-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.mqtest-status {
+  border-radius: 999px !important;
+  padding: 4px 12px !important;
+  font-weight: 600;
+}
+
+.mqtest-status-open {
+  background: rgba(0, 245, 160, 0.2) !important;
+  color: #00f5a0 !important;
+  border: 1px solid rgba(0, 245, 160, 0.5);
+}
+
+.mqtest-status-error {
+  background: rgba(255, 129, 0, 0.2) !important;
+  color: #ffb347 !important;
+  border: 1px solid rgba(255, 129, 0, 0.5);
+}
+
+.mqtest-status-connecting {
+  background: rgba(0, 212, 255, 0.15) !important;
+  color: #7adfff !important;
+  border: 1px solid rgba(0, 212, 255, 0.5);
+}
+
+.mqtest-card {
+  position: relative;
+  z-index: 1;
+  background: var(--panel) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+}
+
+.mqtest-card .ant-card-body {
+  padding: 20px !important;
+}
+
+.mqtest-input-switch {
+  margin-bottom: 6px;
+}
+
+.mqtest-input .ant-input {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(0, 212, 255, 0.2) !important;
+  color: var(--text) !important;
+  font-size: 14px;
+}
+
+.mqtest-input .ant-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.mqtest-voice-tip {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  color: #cfe0f5;
+  font-size: 13px;
+}
+
+.mqtest-mode-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.mqtest-mode-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+
+.mqtest-mode-card:hover {
+  border-color: rgba(0, 212, 255, 0.35);
+  background: rgba(0, 212, 255, 0.08);
+}
+
+.mqtest-mode-card.active {
+  border-color: rgba(0, 212, 255, 0.5);
+  background: rgba(0, 212, 255, 0.15);
+}
+
+.mqtest-mode-title {
+  color: var(--text);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.mqtest-mode-desc {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.mqtest-note {
+  margin-top: 8px;
+  color: #ffb347;
+  font-size: 12px;
+}
+
+.mqtest-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.mqtest-actions .ant-btn-primary {
+  background: linear-gradient(90deg, #00d4ff, #00f5a0) !important;
+  border: none !important;
+  color: #001018 !important;
+  font-weight: 700;
+}
+
+.mqtest-actions .ant-btn {
+  border-radius: 10px !important;
+}
+
+.mqtest-list {
+  background: var(--panel-2);
+  border-radius: 14px;
+  padding: 6px;
+}
+
+.mqtest-list .ant-list-items {
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.mqtest-list .ant-empty-description {
+  color: #e6edf7 !important;
+}
+
+.mqtest-list .ant-empty,
+.mqtest-list .ant-empty-normal,
+.mqtest-list .ant-empty-description,
+.mqtest-list .ant-list-empty-text {
+  color: #e6edf7 !important;
+}
+
+.mqtest-list .ant-empty-image {
+  opacity: 0.6;
+  filter: brightness(1.2);
+}
+.mqtest-item {
+  border: none !important;
+  padding: 10px 8px !important;
+  animation: mqtest-rise-in 360ms ease-out forwards;
+  opacity: 0;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.mqtest-item-user {
+  justify-content: flex-start;
+}
+
+.mqtest-item-assistant {
+  justify-content: flex-end;
+}
+
+.mqtest-item-assistant .mqtest-rail {
+  order: 2;
+  margin-left: 6px;
+}
+
+.mqtest-item-assistant .mqtest-bubble {
+  order: 1;
+}
+
+.mqtest-item-user .mqtest-rail {
+  order: 1;
+  margin-right: 6px;
+}
+
+.mqtest-item-user .mqtest-bubble {
+  order: 2;
+}
+
+.mqtest-item-system {
+  justify-content: center;
+}
+
+.mqtest-rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 46px;
+}
+
+.mqtest-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
+}
+
+.mqtest-time {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.mqtest-bubble {
+  max-width: 80%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mqtest-item-user .mqtest-bubble {
+  background: rgba(0, 212, 255, 0.18);
+  border-color: rgba(0, 212, 255, 0.35);
+}
+
+.mqtest-item-assistant .mqtest-bubble {
+  background: rgba(0, 245, 160, 0.12);
+  border-color: rgba(0, 245, 160, 0.35);
+}
+
+.mqtest-item-system .mqtest-bubble {
+  background: rgba(255, 129, 0, 0.12);
+  border-color: rgba(255, 129, 0, 0.35);
+}
+
+.mqtest-bubble-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.mqtest-bubble-text {
+  color: var(--text);
+}
+
+.mqtest-bubble-file {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted) !important;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+}
+
+.mqtest-tts {
+  margin-top: 8px;
+}
+
+.mqtest-tts audio {
+  width: 100%;
+  height: 36px;
+  border-radius: 18px;
+  background: rgba(9, 18, 32, 0.7);
+  outline: none;
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.35);
+  accent-color: #00d4ff;
+  filter: brightness(0.95) saturate(1.2);
+}
+
+.mqtest-output {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.mqtest-output-block {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.mqtest-output-label {
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.mqtest-output-content {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.mqtest-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.mqtest-panel-title {
+  margin: 0 0 12px 0 !important;
+  color: var(--text) !important;
+}
+
+.mqtest-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.mqtest-stat {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: grid;
+  gap: 4px;
+}
+
+.mqtest-stat-label {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.mqtest-stat-value {
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.mqtest-stat-value.mono {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+}
+
+.mqtest-stat-value.open {
+  color: #00f5a0;
+}
+
+.mqtest-stat-value.error {
+  color: #ffb347;
+}
+
+.mqtest-stat-value.connecting {
+  color: #7adfff;
+}
+
+.mqtest-divider {
+  margin: 4px 0 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.mqtest-pipeline {
+  display: grid;
+  gap: 8px;
+}
+
+.mqtest-node {
+  position: relative;
+  padding: 10px 12px 10px 34px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.mqtest-node::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%);
+}
+
+.mqtest-node.active {
+  border-color: rgba(0, 212, 255, 0.4);
+  color: var(--text);
+}
+
+.mqtest-node.active::before {
+  background: var(--accent);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
+}
+
+/* waveform animation */
+.mqtest-shell::after {
+  content: "";
+  position: absolute;
+  right: -120px;
+  top: 140px;
+  width: 360px;
+  height: 120px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(0, 212, 255, 0.2) 0 6px,
+    rgba(0, 212, 255, 0.05) 6px 12px
+  );
+  mask: radial-gradient(circle at 10% 50%, transparent 0 20px, #000 21px),
+        radial-gradient(circle at 40% 50%, transparent 0 28px, #000 29px),
+        radial-gradient(circle at 70% 50%, transparent 0 18px, #000 19px);
+  filter: blur(0.2px);
+  opacity: 0.5;
+  animation: mqtest-wave 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes mqtest-wave {
+  0% { transform: translateX(0); opacity: 0.3; }
+  50% { transform: translateX(-20px); opacity: 0.6; }
+  100% { transform: translateX(0); opacity: 0.3; }
+}
+
+@keyframes mqtest-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mqtest-rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .mqtest-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mqtest-hero-right {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .mqtest-bubble {
+    max-width: 100%;
+  }
+
+  .mqtest-workbench {
+    grid-template-columns: 1fr;
+  }
+}

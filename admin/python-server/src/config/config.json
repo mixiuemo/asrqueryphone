@@ -1,0 +1,33 @@
+{
+    "TTS": {
+        "ip": "http://127.0.0.1",
+        "port": 5001
+    },
+    "ARS": {
+        "ip": "http://127.0.0.1",
+        "port": 5002
+    },
+    "ZB": {
+        "ip": "http://127.0.0.1",
+        "port": 5003
+    },
+    "VOICE": {
+        "ip": "http://127.0.0.1",
+        "port": 5004
+    },
+    "FACEFusion": {
+        "ip": "http://127.0.0.1",
+        "port": 5500
+    },
+    "KNOWLEDGE": {
+        "host": "http://0.0.0.0",
+        "ip": "127.0.0.1",
+        "port": 5557,
+        "wsPort": 8084,
+        "bat_file": "MagicPdf.bat",
+        "Conda_Dir": "C:",
+        "Conda_Env": "C:\\ProgramData\\miniconda3\\Scripts\\activate.bat C:\\ProgramData\\miniconda3",
+        "Python_Dir": "D:",
+        "Python_Path": "D:\\xjzhkfServer\\python"
+    }
+}

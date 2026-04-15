@@ -1,0 +1,68 @@
+[INFO]:2026-03-08T19:03:55.241825+0800 - 连接消息服务器成功127.0.0.1
+[INFO]:2026-03-08T19:03:55.245827+0800 - 连接消息服务器成功127.0.0.1
+[INFO]:2026-03-08T19:03:55.273834+0800 - 连接消息服务器成功127.0.0.1
+[INFO]:2026-03-08T19:03:55.277833+0800 - 连接消息服务器成功127.0.0.1
+MQ_publisher:  <rabbitmq.RabbitMQ object at 0x0000021481F56110>
+ai114_config表已存在
+所有必要字段已存在，无需添加
+configPath D:\AI114\code\admin\python-server\src\../../../../etc/config.ini
+Config loaded successfully: D:\AI114\code\admin\python-server\src\../../../../etc/config.ini
+ * Serving Flask app 'app'
+ * Debug mode: off
+[INFO]:2026-03-08T19:03:55.321359+0800 - 连接消息服务器成功127.0.0.1
+[INFO]:2026-03-08T19:03:55.321359+0800 - 连接消息服务器成功127.0.0.1
+[INFO]:2026-03-08T19:03:55.326359+0800 - 连接消息服务器成功127.0.0.1
+[INFO]:2026-03-08T19:03:55.326359+0800 - 连接消息服务器成功127.0.0.1
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://198.18.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [08/Mar/2026 19:04:27] "GET /api/tele/?search= HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:04:27] "GET /api/tele/?search= HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:04:30] "GET /api/paraConfig/?search= HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:04:30] "GET /api/paraConfig/?search= HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:04:31] "GET /api/tele/?search= HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:04:32] "GET /api/tele/?search= HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:04:33] "GET /api/serviceStatusRoutes/check_all_services_health HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:04:34] "GET /api/serviceStatusRoutes/check_all_services_health HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:04:40] "GET /api/tele/read_hotwords HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:04:40] "GET /api/tele/read_hotwords HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:04:42] "GET /api/paraConfig/?search= HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:04:42] "GET /api/paraConfig/?search= HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:05:15] "GET /api/tele/?search= HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:05:15] "GET /api/tele/?search= HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:07:27] "GET /api/tele/?search= HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:07:27] "GET /api/tele/?search= HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:07:32] "GET /api/paraConfig/?search= HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:07:33] "GET /api/paraConfig/?search= HTTP/1.1" 200 -
+[INFO]:2026-03-08T19:08:36.321859+0800 - 连接消息服务器成功127.0.0.1
+[INFO]:2026-03-08T19:08:36.325860+0800 - 连接消息服务器成功127.0.0.1
+[INFO]:2026-03-08T19:08:36.328859+0800 - 连接消息服务器成功127.0.0.1
+[INFO]:2026-03-08T19:08:36.331859+0800 - 连接消息服务器成功127.0.0.1
+MQ_publisher:  <rabbitmq.RabbitMQ object at 0x000001DA52AF6110>
+ai114_config表已存在
+所有必要字段已存在，无需添加
+configPath D:\AI114\code\admin\python-server\src\../../../../etc/config.ini
+Config loaded successfully: D:\AI114\code\admin\python-server\src\../../../../etc/config.ini
+ * Serving Flask app 'app'
+ * Debug mode: off
+[INFO]:2026-03-08T19:08:36.350919+0800 - 连接消息服务器成功127.0.0.1
+[INFO]:2026-03-08T19:08:36.350919+0800 - 连接消息服务器成功127.0.0.1
+[INFO]:2026-03-08T19:08:36.355919+0800 - 连接消息服务器成功127.0.0.1
+[INFO]:2026-03-08T19:08:36.356919+0800 - 连接消息服务器成功127.0.0.1
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://198.18.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [08/Mar/2026 19:08:48] "GET /api/tele/?search= HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:08:49] "GET /api/tele/?search= HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:08:50] "GET /api/paraConfig/?search= HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:08:50] "GET /api/paraConfig/?search= HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:08:51] "GET /api/tele/read_hotwords HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:08:52] "GET /api/tele/read_hotwords HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:08:52] "GET /api/tele/?search= HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:08:53] "GET /api/tele/?search= HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:10:36] "GET /api/paraConfig/?search= HTTP/1.1" 200 -
+127.0.0.1 - - [08/Mar/2026 19:10:36] "GET /api/paraConfig/?search= HTTP/1.1" 200 -

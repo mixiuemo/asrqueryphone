@@ -1,0 +1,220 @@
+.side-emo-anchor {
+  position: fixed;
+  width: 220px;
+  bottom: 150px;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.side-emo-bubble {
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  bottom: 210px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #e6f9ff;
+  background: rgba(0, 25, 40, 0.92);
+  border: 1px solid rgba(0, 212, 255, 0.35);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 240ms ease, transform 240ms ease;
+  pointer-events: none;
+}
+
+.side-emo-bubble::after {
+  content: "";
+  position: absolute;
+  left: 22px;
+  bottom: -6px;
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 25, 40, 0.92);
+  border-left: 1px solid rgba(0, 212, 255, 0.35);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.35);
+  transform: rotate(-45deg);
+}
+
+.side-emo-bubble.is-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.side-emo-robot {
+  position: relative;
+  width: 150px;
+  height: 190px;
+  animation: sideEmoFloat 4s ease-in-out infinite;
+}
+
+.side-emo-head {
+  position: absolute;
+  width: 140px;
+  height: 118px;
+  background: linear-gradient(135deg, #2c2c2e, #1a1a1c);
+  border-radius: 36px;
+  left: 5px;
+  top: 18px;
+  z-index: 5;
+  box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.05), 0 10px 26px rgba(0, 0, 0, 0.75);
+}
+
+.side-emo-face {
+  position: absolute;
+  width: 110px;
+  height: 86px;
+  background: #000;
+  border-radius: 24px;
+  left: 15px;
+  top: 16px;
+  overflow: hidden;
+}
+
+
+.side-emo-eyes {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 28px;
+}
+
+.side-emo-eye {
+  width: 28px;
+  height: 24px;
+  background: #00f2fe;
+  border-radius: 8px;
+  box-shadow: 0 0 16px rgba(0, 242, 254, 0.8);
+  animation: sideEmoBlink 4.8s infinite;
+}
+
+.side-emo-zzz {
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  font-size: 12px;
+  color: rgba(0, 242, 254, 0.8);
+  opacity: 0;
+  transform: translateY(2px);
+  transition: opacity 200ms ease, transform 200ms ease;
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.6);
+}
+
+.side-emo-robot.is-smile .side-emo-eye {
+  width: 26px;
+  height: 12px;
+  background: rgba(0, 242, 254, 0.95);
+  border-radius: 18px 18px 0 0;
+  transform: translateY(4px);
+  box-shadow: 0 0 16px rgba(0, 242, 254, 0.9);
+}
+
+.side-emo-robot.is-sleep .side-emo-eye {
+  height: 6px;
+  border-radius: 6px;
+  opacity: 0.9;
+  animation: none;
+  transform: translateY(8px);
+}
+
+.side-emo-robot.is-sleep .side-emo-zzz {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.side-emo-headphone-band {
+  position: absolute;
+  width: 172px;
+  height: 80px;
+  border: 10px solid #0fa3c5;
+  border-bottom: none;
+  border-radius: 90px 90px 0 0;
+  top: -4px;
+  left: -10px;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(15, 163, 197, 0.25);
+}
+
+.side-emo-earcup {
+  position: absolute;
+  width: 28px;
+  height: 40px;
+  background: #0fa3c5;
+  border-radius: 12px;
+  top: 50px;
+  z-index: 6;
+  border: 2px solid rgba(15, 163, 197, 0.35);
+  box-shadow: 0 0 10px rgba(15, 163, 197, 0.25);
+}
+
+.side-emo-earcup.left { left: -12px; }
+.side-emo-earcup.right { right: -12px; }
+
+/* 麦克风臂：参考 emo.html 的弧形结构 */
+.side-emo-mic-arm {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-left: 6px solid #0fa3c5;
+  border-bottom: 6px solid #0fa3c5;
+  border-bottom-left-radius: 28px;
+  left: 6px;
+  top: 22px;
+  transform: rotate(8deg);
+  box-shadow: 0 0 8px rgba(62, 64, 63, 0.25);
+}
+
+.side-emo-mic-head {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #19F5C2;
+  border-radius: 50%;
+  bottom: -8px;
+  right: -8px;
+  box-shadow: 0 0 10px rgba(25, 245, 194, 0.4);
+  animation: sideEmoMicGlow 2s infinite;
+}
+
+
+.side-emo-leg {
+  position: absolute;
+  width: 30px;
+  height: 44px;
+  background: #252527;
+  bottom: 18px;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.side-emo-leg.left { left: 34px; transform: rotate(4deg); }
+.side-emo-leg.right { right: 34px; transform: rotate(-4deg); }
+
+.side-emo-skate {
+  position: absolute;
+  width: 175px;
+  height: 12px;
+  background: linear-gradient(to bottom, #444, #222);
+  bottom: 10px;
+  left: -12px;
+  border-radius: 16px 16px 8px 8px;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes sideEmoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes sideEmoBlink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+
+@keyframes sideEmoMicGlow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
