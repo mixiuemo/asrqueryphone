@@ -17,3 +17,6 @@ https://modelscope.cn/models/AI-ModelScope/Kokoro-82M-v1.1-zh
 
 整个流程都是需要通过MQ收发消息来处理：
   语音卡端>asr识别>业务逻辑交互>语音合成端>语音卡端
+
+
+common为配置类，读取配置文件
