@@ -19,4 +19,4 @@ https://modelscope.cn/models/AI-ModelScope/Kokoro-82M-v1.1-zh
   语音卡端>asr识别>业务逻辑交互>语音合成端>语音卡端
 
 
-common为配置类，读取配置文件
+common为配置类，读取配置文件 config.ini是具体的配置项
